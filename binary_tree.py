@@ -55,22 +55,22 @@ class BinaryTreeRootNode:
 
         # For left side
         if self.left:
-            elements += self.left.inorderTraversal()
+            elements += self.left.preorderTraversal()
 
         # For right side
         if self.right:
-            elements += self.right.inorderTraversal()
+            elements += self.right.preorderTraversal()
         return elements
 
     def postorderTraversal(self):
         elements = []
         # For left side
         if self.left:
-            elements += self.left.inorderTraversal()
+            elements += self.left.postorderTraversal()
 
         # For right side
         if self.right:
-            elements += self.right.inorderTraversal()
+            elements += self.right.postorderTraversal()
 
         # For root node
         elements.append(self.data)
